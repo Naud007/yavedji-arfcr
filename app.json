@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "CodesEval",
-    "slug": "CodesEval",
+    "name": "arfcr-mobile-app",
+    "slug": "yavedji-arfcr",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/images/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -21,10 +21,17 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.thegideona.evalcodes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "4e6ff39a-ecfd-4fcd-a591-40e7b6a8afde"
+      }
+    },
+    "owner": "naud-team"
   }
 }
