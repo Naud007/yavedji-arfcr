@@ -1,10 +1,10 @@
 const GlobalColors = {
 
-    primary: '#23CE6B',
-    background: '#272D2D',
-    light: '#F6F8FF',
+    primary: '#008540',
+    background: '#202020',
+    light: '#F1F7EE',
     gray: '#50514F',
-    accent: '#A846A0'
+    accent: '#F1F7EE'
 
 }
 

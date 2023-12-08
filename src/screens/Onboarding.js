@@ -13,18 +13,27 @@ const Onboarding = ({ props }) => {
     const dispatch = useDispatch();
 
     const RenderItem = ({ item }) => (
-        <View style={{ width: Dimensions.get('window').width, height: Dimensions.get('screen').height, overflow: "hidden" }}>
+        <View style={{ width: Dimensions.get('window').width, height: Dimensions.get('screen').height * 0.6, overflow: "hidden", }}>
 
-            <ImageBackground source={item.img} style={{ width: "100%", height: "100%", }} >
+            {/* <View style={{ width: "100%", height: "100%", }} > */}
 
-                <View style={{ width: "90%", height: 160, position: 'absolute', borderRadius: 10, alignSelf: 'center', bottom: 120, justifyContent: 'center', backgroundColor: 'rgba(246, 248, 255, 0.9)' }}>
+            <View style={{
+                width: "90%",
+                height: 160,
+                position: 'absolute',
+                borderRadius: 10,
+                alignSelf: 'center',
+                bottom: 120,
+                justifyContent: 'center',
+                // backgroundColor: 'rgba(246, 248, 255, 0.9)' 
+            }}>
 
-                    <Text adjustsFontSizeToFit numberOfLines={2} style={{ fontSize: 18, marginHorizontal: 12, textAlign: "center", color: GlobalColors.light, marginBottom: 12 }}>{item.title}</Text>
-                    <Text adjustsFontSizeToFit numberOfLines={6} style={{ fontSize: 14, marginHorizontal: 16, textAlign: "center", color: GlobalColors.light, marginTop: 6, lineHeight: 18 }}>{item.caption}</Text>
+                <Text adjustsFontSizeToFit numberOfLines={2} style={{ fontSize: 18, marginHorizontal: 12, textAlign: "center", color: GlobalColors.gray, marginBottom: 12 }}>{item.title}</Text>
+                <Text adjustsFontSizeToFit numberOfLines={6} style={{ fontSize: 14, marginHorizontal: 16, textAlign: "center", color: GlobalColors.gray, marginTop: 6, lineHeight: 18 }}>{item.caption}</Text>
 
-                </View>
+            </View>
 
-            </ImageBackground>
+            {/* </View> */}
 
             {item.id == 2 &&
                 <View style={{ position: 'absolute', zIndex: 1, bottom: 60, width: 130, height: 45, alignSelf: 'center' }}>
@@ -43,20 +52,20 @@ const Onboarding = ({ props }) => {
         {
             id: 0,
             img: require('../../assets/images/onboarding/1.png'),
-            title: "LEARN TO CODE",
-            caption: "Embark on your coding journey through coding quizzes, assessments, and challenges to sharpen your skills and accelerate your coding career."
+            title: "Réussir l'examen de permis de conduire",
+            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         },
         {
             id: 1,
             img: require('../../assets/images/onboarding/2.png'),
-            title: "ACE YOUR NEXT INTERVIEW",
-            caption: "With our super app, master required technical skills, take your next interview with confidence and prepare for the next big step in your career."
+            title: "Préparez vous pour l'examen en Français et en Fon",
+            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         },
         {
             id: 2,
             img: require('../../assets/images/onboarding/3.png'),
-            title: "ELEVATE YOUR CAREER",
-            caption: "Your coding journey is not only about learning. Earn badges, certifications, and industry awards as you aim to become a world-class tech talent."
+            title: "Plus de 600 questions pour bien se préparer",
+            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         }
     ];
 
@@ -71,12 +80,14 @@ const Onboarding = ({ props }) => {
     return (
         <>
 
-            <View style={{ width: Dimensions.get('window').width, height: Dimensions.get('screen').height }}>
+            <Image source={require("../../assets/images/place-amazone.jpeg")} style={{width: Dimensions.get('window').width, height: Dimensions.get('screen').height * 0.4}} resizeMode="cover" />
+
+            <View style={{ width: Dimensions.get('window').width, height: Dimensions.get('screen').height * 0.6, backgroundColor: GlobalColors.light }}>
 
                 <Carousel
                     loop={false}
                     width={Dimensions.get('window').width}
-                    height={Dimensions.get('screen').height}
+                    height={Dimensions.get('screen').height * 0.6}
                     autoPlay={true}
                     autoPlayInterval={5000}
                     data={content_data}
