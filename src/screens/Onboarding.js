@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from "react";
-import { View, Text, Dimensions, ImageBackground } from "react-native";
+import { View, Text, Dimensions, ImageBackground, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useDispatch } from "react-redux";
 import Carousel from "react-native-reanimated-carousel";
@@ -51,19 +51,19 @@ const Onboarding = ({ props }) => {
     const content_data = [
         {
             id: 0,
-            img: require('../../assets/images/onboarding/1.png'),
+            // img: require('../../assets/images/onboarding/1.png'),
             title: "Réussir l'examen de permis de conduire",
             caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         },
         {
             id: 1,
-            img: require('../../assets/images/onboarding/2.png'),
+            // img: require('../../assets/images/onboarding/2.png'),
             title: "Préparez vous pour l'examen en Français et en Fon",
             caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         },
         {
             id: 2,
-            img: require('../../assets/images/onboarding/3.png'),
+            // img: require('../../assets/images/onboarding/3.png'),
             title: "Plus de 600 questions pour bien se préparer",
             caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
         }

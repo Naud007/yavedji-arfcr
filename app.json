@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.thegideona.evalcodes"
+      "package": "com.yavedji.arfcr"
     },
     "web": {
       "favicon": "./assets/favicon.png"
