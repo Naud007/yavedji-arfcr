@@ -46,6 +46,7 @@ export default function App() {
         await Font.loadAsync({
           "Inter-ExtraBold": require("./assets/Fonts/Inter/Inter-ExtraBold.ttf"),
           "Inter-Medium": require("./assets/Fonts/Inter/Inter-Medium.ttf"),
+          "Inter-Bold": require("./assets/Fonts/Inter/Inter-Bold.ttf"),
           "Inter-Regular": require("./assets/Fonts/Inter/Inter-Regular.ttf"),
         })
       } catch (e) {
@@ -100,7 +101,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F6F8FF',
+    backgroundColor: GlobalColors.light,
     // alignItems: 'center',
     // justifyContent: 'center',
   },
