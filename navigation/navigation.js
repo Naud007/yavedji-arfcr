@@ -19,13 +19,13 @@ const BottomTab = createBottomTabNavigator();
 export default function Navigation() {
     const { colors } = useTheme();
 
-    const firstLaunch = useSelector((state) => state.appSettingsReducer.appFirstLaunch);
+    const appFirstLaunch = useSelector((state) => state.appSettingsReducer.appFirstLaunch);
     const loggedIn = useSelector((state) => state.appSettingsReducer.loggedIn);
     const profileData = useSelector((state) => state.appProfileReducer.profileData);
 
     return (
 
-        firstLaunch ?
+        appFirstLaunch ?
 
             <Onboarding />
             

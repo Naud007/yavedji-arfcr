@@ -44,7 +44,7 @@ const Onboarding = ({ props }) => {
             {/* {item.id == 2 && */}
                 <View style={{ position: 'absolute', zIndex: 1, bottom: 48, width: "80%", height: 48, alignSelf: 'center' }}>
                     <TouchableOpacity
-                        onPress={() => dispatch({ type: "SET_APP_FIRST_LAUNCH", value: false })}
+                        onPress={() => dispatch({ type: 'SET_APP_FIRST_LAUNCH', value: false })}
                         style={{
                             width: "100%",
                             height: "100%",

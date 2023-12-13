@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "arfcr-mobile-app",
-    "slug": "yavedji-arfcr",
+    "slug": "arfcr-guide-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "jsEngine": "hermes",
@@ -30,9 +30,12 @@
     },
     "extra": {
       "eas": {
-        "projectId": "4e6ff39a-ecfd-4fcd-a591-40e7b6a8afde"
+        "projectId": "a0dc21d0-07f0-4ac0-a8d6-bc8dbf8a6780"
       }
     },
-    "owner": "naud-team"
+    "owner": "thegideona",
+    "plugins": [
+      "expo-build-properties"
+    ]
   }
 }
