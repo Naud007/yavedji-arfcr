@@ -31,7 +31,7 @@ const Onboarding = ({ props }) => {
 
                 <Text adjustsFontSizeToFit numberOfLines={2} style={{
                     fontSize: 32, marginHorizontal: 12, textAlign: "center", color: GlobalColors.gray, marginBottom: 12, fontFamily: "Inter-ExtraBold", lineHeight: 40, width: "80%",
-                    // borderColor: GlobalColors.background, borderWidth: 0.5 
+                    // borderColor: GlobalColors.dark, borderWidth: 0.5 
                 }}>
                     {item.title}
                 </Text>
@@ -50,7 +50,7 @@ const Onboarding = ({ props }) => {
                             height: "100%",
                             justifyContent: 'center',
                             alignItems: 'center',
-                            backgroundColor: GlobalColors.background,
+                            backgroundColor: GlobalColors.dark,
                             borderRadius: 25,
                             opacity: item.id != 2 ? 0.85 : 1,
                         }}
