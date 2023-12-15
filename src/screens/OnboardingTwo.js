@@ -1,21 +1,37 @@
 import React from "react";
-import { View, Text, ImageBackground, StyleSheet } from "react-native";
+import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
 import GlobalColors from "../styles/globalColors";
 
 const OnboardingTwo = () => {
     return (
         <ImageBackground
-        source={require('../../assets/images/onboard_2.jpg')}
-        style={styling.backgroundImage}
+            source={require('../../assets/images/onboard_2.jpg')}
+            style={styling.backgroundImage}
         >
-            <View style={styling.gradient}></View>
-            {/* <LinearGradient
-            colors={["rgba(241, 247, 238, 1)", "rgba(241, 247, 238, 0)"]}
-            style={styling.gradient}
+            {/* <View style={styling.gradient}></View> */}
+            <LinearGradient
+                colors={[
+                    "rgba(241, 247, 238, 0)",
+                    "rgba(241, 247, 238, 0.95)",
+                    "rgba(241, 247, 238, 1)",
+                ]}
+                style={styling.gradient}
+                locations={[0, 0.5, 1]}
             >
+                <Text style={styling.headerText}>Nous vous aidons à démarrer</Text>
 
-            </LinearGradient> */}
+                <View style={{ width: "100%", position: 'absolute', bottom: "5%", alignItems: "center", }}>
+                    <TouchableOpacity style={styling.button}>
+                        <Text style={styling.buttonText}>Créer un nouveau compte</Text>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 16, borderColor: GlobalColors.dark, borderWidth: 2}]}>
+                        <Text style={[styling.buttonText, {color: GlobalColors.dark}]}>J'ai déjà un compte</Text>
+                    </TouchableOpacity>
+                </View>
+
+            </LinearGradient>
 
         </ImageBackground>
     )
@@ -30,9 +46,36 @@ const styling = StyleSheet.create({
     },
     gradient: {
         flex: 1,
+        // justifyContent: "center",
+        // alignItems: "center",
+        backgroundColor: 'rgba(255, 255, 255, 0.25)',
+    },
+    headerText: {
+        fontSize: 32,
+        fontFamily: 'Inter-Bold',
+        color: GlobalColors.dark,
+        position: 'absolute',
+        bottom: "30%",
+        left: "5%",
+        lineHeight: 40,
+    },
+    button: {
+        width: '90%',
+        backgroundColor: GlobalColors.primary,
+        height: 48,
+        borderRadius: 25,
+        alignItems: 'center',
+        display: "flex",
         justifyContent: "center",
-        backgroundColor: 'rgba(255, 255, 255, 0.25)'
-    }
+    },
+    buttonText: {
+        color: GlobalColors.light,
+        fontSize: 20,
+        // width: '100%',
+        // height: "100%",
+        fontFamily: 'Inter-Medium',
+        textAlign: 'center',
+    },
 });
 
 export default OnboardingTwo;
