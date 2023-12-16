@@ -1,9 +1,13 @@
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet, TouchableOpacity } from "react-native";
 import LinearGradient from "react-native-linear-gradient";
+import { useNavigation } from "@react-navigation/native";
+
 import GlobalColors from "../styles/globalColors";
 
 const OnboardingTwo = () => {
+    const navigation = useNavigation();
+
     return (
         <ImageBackground
             source={require('../../assets/images/onboard_2.jpg')}
@@ -22,11 +26,11 @@ const OnboardingTwo = () => {
                 <Text style={styling.headerText}>Nous vous aidons à démarrer</Text>
 
                 <View style={{ width: "100%", position: 'absolute', bottom: "5%", alignItems: "center", }}>
-                    <TouchableOpacity style={styling.button}>
+                    <TouchableOpacity style={styling.button} onPress={() => navigation.navigate("Inscription")}>
                         <Text style={styling.buttonText}>Créer un nouveau compte</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 16, borderColor: GlobalColors.dark, borderWidth: 2}]}>
+                    <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 12, borderColor: GlobalColors.dark, borderWidth: 2}]}>
                         <Text style={[styling.buttonText, {color: GlobalColors.dark}]}>J'ai déjà un compte</Text>
                     </TouchableOpacity>
                 </View>
@@ -41,7 +45,7 @@ const OnboardingTwo = () => {
 const styling = StyleSheet.create({
     backgroundImage: {
         flex: 1,
-        resizeMode: 'cover',
+        resizeMode: 'contain',
         justifyContent: 'center'
     },
     gradient: {

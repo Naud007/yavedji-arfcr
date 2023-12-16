@@ -12,6 +12,7 @@ import { useTheme } from "react-native-paper";
 import Onboarding from "../src/screens/Onboarding";
 import Welcome from "../src/screens/Welcome";
 import OnboardingTwo from "../src/screens/OnboardingTwo";
+import Inscription from "../src/screens/Inscription";
 
 const Stack = createNativeStackNavigator();
 // const Tab = createMaterialTopTabNavigator();
@@ -46,6 +47,24 @@ export default function Navigation() {
                     ) : (
                         <>
                             <Stack.Screen name="GetStarted" component={OnboardingTwo}
+                                options={{
+                                    animation: "slide_from_right",
+                                    headerStyle: {
+                                        backgroundColor: colors.light,
+                                        elevation: 0,
+                                        shadowOpacity: 0,
+                                        borderBottomWidth: 0,
+                                    },
+                                    headerTitle: () => {
+                                        null
+                                    },
+                                    headerShadowVisible: false,
+                                    headerShown: false
+                                }}
+                            />
+
+                            <Stack.Screen name="Inscription" component={Inscription}
+
                                 options={{
                                     animation: "slide_from_right",
                                     headerStyle: {
