@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-import { useNavigation } from "@react-navigation/native";
-
 import GlobalColors from "../styles/globalColors";
 
-const Inscription = () => {
+const Connexion = () => {
     const [focusedInput, setFocusedInput] = useState(null);
-
-    const navigation = useNavigation();
 
     const handleInputFocus = (fieldName) => {
         setFocusedInput(fieldName);
@@ -22,10 +18,6 @@ const Inscription = () => {
         return focusedInput === fieldName;
     };
 
-    const navigateToConnexion = () => {
-        navigation.navigate("Connexion");
-    }
-
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
@@ -33,7 +25,7 @@ const Inscription = () => {
             </View>
 
             <View style={styleSheet.main}>
-                <Text style={styleSheet.title}>Créer un compte</Text>
+                <Text style={styleSheet.title}>Connectez-vous</Text>
                 <Text style={styleSheet.subTitle}>Nous vous aidons à obtenir votre permis !</Text>
 
                 <View style={styleSheet.inputContainer}>
@@ -51,27 +43,22 @@ const Inscription = () => {
 
                 <View style={styleSheet.inputContainer}>
                     <Text style={styleSheet.label}>Numéro de Téléphone<Text style={{ color: "#E31919", letterSpacing: -2 }}> *</Text></Text>
-                    <TextInput
-                        style={[
-                            styleSheet.inputField,
-                            isInputFocused('phone') && { borderColor: GlobalColors.primary, borderWidth: 1.5 },
-                        ]}
-                        placeholder=""
-                        keyboardType="phone-pad"
-                        onFocus={() => handleInputFocus('phone')}
-                        onBlur={handleInputBlur}
+                    <TextInput 
+                    style={[
+                        styleSheet.inputField,
+                        isInputFocused('phone') && {borderColor: GlobalColors.primary, borderWidth: 1.5},
+                    ]} 
+                    placeholder="" 
+                    keyboardType="phone-pad" 
+                    onFocus={() => handleInputFocus('phone')}
+                    onBlur={handleInputBlur}
                     />
                 </View>
 
                 <TouchableOpacity style={styleSheet.button}>
                     <Text style={styleSheet.buttonText}>S'inscrire</Text>
                 </TouchableOpacity>
-                <Text style={styleSheet.login}>
-                    Vous avez déjà un compte ?{" "}
-                    <Text onPress={navigateToConnexion} style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>
-                        Se connecter
-                    </Text>
-                </Text>
+                <Text style={styleSheet.login}>Vous avez déjà un compte ? <Text style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>Se connecter</Text></Text>
             </View>
         </View>
     )
@@ -142,4 +129,4 @@ const styleSheet = StyleSheet.create({
     },
 });
 
-export default Inscription;
+export default Connexion;

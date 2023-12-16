@@ -30,7 +30,7 @@ const OnboardingTwo = () => {
                         <Text style={styling.buttonText}>Créer un nouveau compte</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 12, borderColor: GlobalColors.dark, borderWidth: 2}]}>
+                    <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 12, borderColor: GlobalColors.dark, borderWidth: 1.5}]}>
                         <Text style={[styling.buttonText, {color: GlobalColors.dark}]}>J'ai déjà un compte</Text>
                     </TouchableOpacity>
                 </View>
@@ -66,7 +66,7 @@ const styling = StyleSheet.create({
     button: {
         width: '90%',
         backgroundColor: GlobalColors.primary,
-        height: 48,
+        height: 50,
         borderRadius: 25,
         alignItems: 'center',
         display: "flex",
