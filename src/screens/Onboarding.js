@@ -69,19 +69,19 @@ const Onboarding = ({ props }) => {
             id: 0,
             // img: require('../../assets/images/onboarding/1.png'),
             title: "Réussir l'examen de permis de conduire",
-            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
+            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro!"
         },
         {
             id: 1,
             // img: require('../../assets/images/onboarding/2.png'),
             title: "Des modules, sujets, tests pour la réussite",
-            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
+            caption: "Des modules variés et des tests pratiques pour réussir"
         },
         {
             id: 2,
             // img: require('../../assets/images/onboarding/3.png'),
             title: "Plus de 600 questions pour bien se préparer",
-            caption: "Bienvenue dans votre parcours pour devenir le nouveau routier pro en ville !"
+            caption: "600+ questions pour une préparation complète."
         }
     ];
 

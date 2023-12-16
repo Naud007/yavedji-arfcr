@@ -2,8 +2,11 @@ import React, { useState } from "react";
 import { View, Text, StyleSheet, TouchableOpacity, ImageBackground, TextInput, Image } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import GlobalColors from "../styles/globalColors";
+import { useNavigation } from "@react-navigation/native";
 
 const Connexion = () => {
+    const navigation = useNavigation();
+    
     const [focusedInput, setFocusedInput] = useState(null);
 
     const handleInputFocus = (fieldName) => {
@@ -17,7 +20,10 @@ const Connexion = () => {
     const isInputFocused = (fieldName) => {
         return focusedInput === fieldName;
     };
-
+    const navigateToInscription = () => {
+        navigation.navigate("Inscription");
+    }
+    
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
@@ -26,23 +32,10 @@ const Connexion = () => {
 
             <View style={styleSheet.main}>
                 <Text style={styleSheet.title}>Connectez-vous</Text>
-                <Text style={styleSheet.subTitle}>Nous vous aidons à obtenir votre permis !</Text>
+                <Text style={styleSheet.subTitle}>Heureux de vous voir à nouveau!</Text>
 
                 <View style={styleSheet.inputContainer}>
-                    <Text style={styleSheet.label}>Votre Nom<Text style={{ color: "#E31919", letterSpacing: -2 }}> *</Text></Text>
-                    <TextInput
-                        style={[
-                            styleSheet.inputField,
-                            isInputFocused('name') && { borderColor: GlobalColors.primary, borderWidth: 1.5 },
-                        ]}
-                        placeholder=""
-                        onFocus={() => handleInputFocus('name')}
-                        onBlur={handleInputBlur}
-                    />
-                </View>
-
-                <View style={styleSheet.inputContainer}>
-                    <Text style={styleSheet.label}>Numéro de Téléphone<Text style={{ color: "#E31919", letterSpacing: -2 }}> *</Text></Text>
+                    <Text style={styleSheet.label}>Contact<Text style={{ color: "#E31919", letterSpacing: -2 }}> *</Text></Text>
                     <TextInput 
                     style={[
                         styleSheet.inputField,
@@ -56,9 +49,9 @@ const Connexion = () => {
                 </View>
 
                 <TouchableOpacity style={styleSheet.button}>
-                    <Text style={styleSheet.buttonText}>S'inscrire</Text>
+                    <Text style={styleSheet.buttonText}>Se Connecter</Text>
                 </TouchableOpacity>
-                <Text style={styleSheet.login}>Vous avez déjà un compte ? <Text style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>Se connecter</Text></Text>
+                <Text onPress={navigateToInscription} style={styleSheet.login}>Vous n'avez pas de compte ? <Text style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>créer un compte</Text></Text>
             </View>
         </View>
     )
