@@ -31,7 +31,7 @@ const OnboardingTwo = () => {
                     </TouchableOpacity>
 
                     <TouchableOpacity style={[styling.button, {backgroundColor: "rgba(255, 255, 255, 0)", marginTop: 12, borderColor: GlobalColors.dark, borderWidth: 1.5}]}>
-                        <Text style={[styling.buttonText, {color: GlobalColors.dark}]}>J'ai déjà un compte</Text>
+                        <Text style={[styling.buttonText, {color: GlobalColors.dark}]} onPress={() => navigation.navigate("Connexion")}>J'ai déjà un compte</Text>
                     </TouchableOpacity>
                 </View>
 

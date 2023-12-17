@@ -21,7 +21,7 @@ const Connexion = () => {
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
-                <Image source={require("../../assets/images/logo-in-app.png")} style={{}} />
+            <Image source={require("../../assets/images/logo-hd.png")} style={styleSheet.logoImage} />
             </View>
 
             <View style={styleSheet.main}>
@@ -69,7 +69,7 @@ const Connexion = () => {
 const styleSheet = StyleSheet.create({
     logoImage: {
         width: 200,
-        height: 200,
+        height: 128,
         resizeMode: "contain",
     },
     title: {

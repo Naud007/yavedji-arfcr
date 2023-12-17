@@ -29,7 +29,7 @@ const Inscription = () => {
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
-                <Image source={require("../../assets/images/logo-in-app.png")} style={{}} />
+                <Image source={require("../../assets/images/logo-hd.png")} style={styleSheet.logoImage} />
             </View>
 
             <View style={styleSheet.main}>
@@ -82,8 +82,9 @@ const Inscription = () => {
 const styleSheet = StyleSheet.create({
     logoImage: {
         width: 200,
-        height: 200,
+        height: 128,
         resizeMode: "contain",
+        // borderWidth: 1, borderColor: "#202020",
     },
     title: {
         fontSize: 32,
@@ -97,7 +98,6 @@ const styleSheet = StyleSheet.create({
         marginBottom: "10%",
     },
     main: {
-        // borderWidth: 1, borderColor: "#202020",
         flex: 1,
         paddingHorizontal: 24,
     },
