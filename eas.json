@@ -10,7 +10,7 @@
       "preview": {
         "distribution": "internal"
       },
-      "launch": {
+      "previewApk": {
         "android": {
           "gradleCommand": ":app:assembleRelease"
         }
