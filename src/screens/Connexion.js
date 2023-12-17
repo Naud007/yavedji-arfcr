@@ -26,7 +26,7 @@ const Connexion = () => {
     
     return (
         <View style={{ flex: 1, }}>
-            <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
+            <View style={{ width: "100%", height: "35%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
             <Image source={require("../../assets/images/logo-hd.png")} style={styleSheet.logoImage} />
             </View>
 
@@ -35,7 +35,7 @@ const Connexion = () => {
                 <Text style={styleSheet.subTitle}>Heureux de vous voir à nouveau!</Text>
 
                 <View style={styleSheet.inputContainer}>
-                    <Text style={styleSheet.label}>Contact<Text style={{ color: "#E31919", letterSpacing: -2 }}> *</Text></Text>
+                    <Text style={styleSheet.label}>Numéro de Téléphone<Text style={{ color: "#E31919", letterSpacing: -2 }}>{" "}*</Text></Text>
                     <TextInput 
                     style={[
                         styleSheet.inputField,
@@ -51,7 +51,7 @@ const Connexion = () => {
                 <TouchableOpacity style={styleSheet.button}>
                     <Text style={styleSheet.buttonText}>Se Connecter</Text>
                 </TouchableOpacity>
-                <Text onPress={navigateToInscription} style={styleSheet.login}>Vous n'avez pas de compte ? <Text style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>créer un compte</Text></Text>
+                <Text onPress={navigateToInscription} style={styleSheet.login}>Vous n'avez pas de compte ? <Text style={{ fontFamily: 'Inter-Medium', color: GlobalColors.primary, fontSize: 14 }}>Créer un compte</Text></Text>
             </View>
         </View>
     )
@@ -116,9 +116,10 @@ const styleSheet = StyleSheet.create({
     login: {
         fontSize: 13,
         fontFamily: 'Inter-Regular',
-        width: "100%",
+        width: "60%",
         textAlign: 'center',
         marginTop: "4%",
+        alignSelf: "center"
     },
 });
 
