@@ -24,6 +24,7 @@
     "expo-splash-screen": "~0.20.5",
     "expo-status-bar": "~1.6.0",
     "expo-system-ui": "~2.4.0",
+    "flag-icons": "^7.1.0",
     "i18next": "^23.5.1",
     "immer": "^10.0.3",
     "postinstall-postinstall": "^2.1.0",

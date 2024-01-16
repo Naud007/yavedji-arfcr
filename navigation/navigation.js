@@ -14,6 +14,9 @@ import Welcome from "../src/screens/Welcome";
 import OnboardingTwo from "../src/screens/OnboardingTwo";
 import Inscription from "../src/screens/Inscription";
 import Connexion from "../src/screens/Connexion";
+import LicenceSwitch from "../src/screens/LicenceType";
+import PreferenceLangue from "../src/screens/ChoixLangue";
+import Subscription from "../src/screens/Subscription";
 
 const Stack = createNativeStackNavigator();
 // const Tab = createMaterialTopTabNavigator();
@@ -83,6 +86,60 @@ export default function Navigation() {
                             />
 
                             <Stack.Screen name="Connexion" component={Connexion}
+
+                                options={{
+                                    animation: "slide_from_right",
+                                    headerStyle: {
+                                        backgroundColor: colors.light,
+                                        elevation: 0,
+                                        shadowOpacity: 0,
+                                        borderBottomWidth: 0,
+                                    },
+                                    headerTitle: () => {
+                                        null
+                                    },
+                                    headerShadowVisible: false,
+                                    headerShown: false
+                                }}
+                            />
+
+                            <Stack.Screen name="SelectLicence" component={LicenceSwitch}
+
+                                options={{
+                                    animation: "slide_from_right",
+                                    headerStyle: {
+                                        backgroundColor: colors.light,
+                                        elevation: 0,
+                                        shadowOpacity: 0,
+                                        borderBottomWidth: 0,
+                                    },
+                                    headerTitle: () => {
+                                        null
+                                    },
+                                    headerShadowVisible: false,
+                                    headerShown: false
+                                }}
+                            />
+
+                            <Stack.Screen name="SelectLangue" component={PreferenceLangue}
+
+                                options={{
+                                    animation: "slide_from_right",
+                                    headerStyle: {
+                                        backgroundColor: colors.light,
+                                        elevation: 0,
+                                        shadowOpacity: 0,
+                                        borderBottomWidth: 0,
+                                    },
+                                    headerTitle: () => {
+                                        null
+                                    },
+                                    headerShadowVisible: false,
+                                    headerShown: false
+                                }}
+                            />
+
+                            <Stack.Screen name="Subscribe" component={Subscription}
 
                                 options={{
                                     animation: "slide_from_right",

@@ -26,6 +26,11 @@ const Inscription = () => {
         navigation.navigate("Connexion");
     }
 
+    const navigateToLicenceSwitch = () => {
+        console.log('Next to Licence type');
+        navigation.navigate("SelectLicence");
+    }
+
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "25%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
@@ -64,7 +69,7 @@ const Inscription = () => {
                 </View>
 
                 <TouchableOpacity style={styleSheet.button}>
-                    <Text style={styleSheet.buttonText}>S'inscrire</Text>
+                    <Text onPress={navigateToLicenceSwitch} style={styleSheet.buttonText}>S'inscrire</Text>
                 </TouchableOpacity>
                 <Text style={styleSheet.login}>
                     Vous avez déjà un compte ?{" "}

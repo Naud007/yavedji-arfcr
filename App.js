@@ -47,7 +47,10 @@ export default function App() {
           "Inter-ExtraBold": require("./assets/Fonts/Inter/Inter-ExtraBold.ttf"),
           "Inter-Medium": require("./assets/Fonts/Inter/Inter-Medium.ttf"),
           "Inter-Bold": require("./assets/Fonts/Inter/Inter-Bold.ttf"),
+          "Inter-SemiBold": require("./assets/Fonts/Inter/Inter-SemiBold.ttf"),
           "Inter-Regular": require("./assets/Fonts/Inter/Inter-Regular.ttf"),
+          "Inter-Light": require("./assets/Fonts/Inter/Inter-Light.ttf"),
+          "Inter-Thin": require("./assets/Fonts/Inter/Inter-Thin.ttf"),
         })
       } catch (e) {
         console.warn(e);

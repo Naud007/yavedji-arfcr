@@ -6,7 +6,7 @@ import { useNavigation } from "@react-navigation/native";
 
 const Connexion = () => {
     const navigation = useNavigation();
-    
+
     const [focusedInput, setFocusedInput] = useState(null);
 
     const handleInputFocus = (fieldName) => {
@@ -23,11 +23,11 @@ const Connexion = () => {
     const navigateToInscription = () => {
         navigation.navigate("Inscription");
     }
-    
+
     return (
         <View style={{ flex: 1, }}>
             <View style={{ width: "100%", height: "35%", justifyContent: "center", alignItems: "center", marginTop: 24 }}>
-            <Image source={require("../../assets/images/logo-hd.png")} style={styleSheet.logoImage} />
+                <Image source={require("../../assets/images/logo-hd.png")} style={styleSheet.logoImage} />
             </View>
 
             <View style={styleSheet.main}>
@@ -36,15 +36,15 @@ const Connexion = () => {
 
                 <View style={styleSheet.inputContainer}>
                     <Text style={styleSheet.label}>Numéro de Téléphone<Text style={{ color: "#E31919", letterSpacing: -2 }}>{" "}*</Text></Text>
-                    <TextInput 
-                    style={[
-                        styleSheet.inputField,
-                        isInputFocused('phone') && {borderColor: GlobalColors.primary, borderWidth: 1.5},
-                    ]} 
-                    placeholder="" 
-                    keyboardType="phone-pad" 
-                    onFocus={() => handleInputFocus('phone')}
-                    onBlur={handleInputBlur}
+                    <TextInput
+                        style={[
+                            styleSheet.inputField,
+                            isInputFocused('phone') && { borderColor: GlobalColors.primary, borderWidth: 1.5 },
+                        ]}
+                        placeholder=""
+                        keyboardType="phone-pad"
+                        onFocus={() => handleInputFocus('phone')}
+                        onBlur={handleInputBlur}
                     />
                 </View>
 
