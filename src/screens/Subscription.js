@@ -5,8 +5,15 @@ import { SvgXml } from "react-native-svg";
 
 import GlobalColors from '../styles/globalColors';
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from '@react-navigation/native';
 
 const Subscription = () => {
+
+    const navigation = useNavigation();
+
+    const completeOnboarding = () => {
+        navigation.navigate("FinOnboarding");
+    }
 
     return (
         <ScrollView style={styles.container} contentContainerStyle={{ alignItems: "center" }}>
@@ -70,7 +77,7 @@ const Subscription = () => {
                 </View>
             </View>
 
-            <TouchableOpacity style={{marginBottom: 40}}>
+            <TouchableOpacity onPress={completeOnboarding} style={{marginBottom: 40}}>
                 <Text style={styles.trial}>Continuer avec la version éssaie</Text>
             </TouchableOpacity>
 

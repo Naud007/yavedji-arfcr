@@ -68,8 +68,8 @@ const Inscription = () => {
                     />
                 </View>
 
-                <TouchableOpacity style={styleSheet.button}>
-                    <Text onPress={navigateToLicenceSwitch} style={styleSheet.buttonText}>S'inscrire</Text>
+                <TouchableOpacity onPress={navigateToLicenceSwitch} style={styleSheet.button}>
+                    <Text style={styleSheet.buttonText}>S'inscrire</Text>
                 </TouchableOpacity>
                 <Text style={styleSheet.login}>
                     Vous avez déjà un compte ?{" "}

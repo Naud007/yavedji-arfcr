@@ -27,6 +27,7 @@
     "flag-icons": "^7.1.0",
     "i18next": "^23.5.1",
     "immer": "^10.0.3",
+    "lottie-react-native": "^6.5.1",
     "postinstall-postinstall": "^2.1.0",
     "react": "18.2.0",
     "react-i18next": "^13.5.0",

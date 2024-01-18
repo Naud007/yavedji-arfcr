@@ -17,6 +17,7 @@ import Connexion from "../src/screens/Connexion";
 import LicenceSwitch from "../src/screens/LicenceType";
 import PreferenceLangue from "../src/screens/ChoixLangue";
 import Subscription from "../src/screens/Subscription";
+import Succes from "../src/screens/Succes";
 
 const Stack = createNativeStackNavigator();
 // const Tab = createMaterialTopTabNavigator();
@@ -140,6 +141,24 @@ export default function Navigation() {
                             />
 
                             <Stack.Screen name="Subscribe" component={Subscription}
+
+                                options={{
+                                    animation: "slide_from_right",
+                                    headerStyle: {
+                                        backgroundColor: colors.light,
+                                        elevation: 0,
+                                        shadowOpacity: 0,
+                                        borderBottomWidth: 0,
+                                    },
+                                    headerTitle: () => {
+                                        null
+                                    },
+                                    headerShadowVisible: false,
+                                    headerShown: false
+                                }}
+                            />
+
+                            <Stack.Screen name="FinOnboarding" component={Succes}
 
                                 options={{
                                     animation: "slide_from_right",
