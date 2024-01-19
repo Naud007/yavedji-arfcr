@@ -48,7 +48,7 @@ const LicenceSwitch = () => {
     const handleNext = () => {
         if (selectedOption) {
             // Save the selected license to Redux state
-            dispatch({ type: 'SET_PROFILE_DATA', value: { ...profileData, typePermis: selectedLicense } });
+            dispatch({ type: 'SET_PROFILE_DATA', value: { ...profileData, typePermis: selectedOption } });
 
             // Navigate to the next screen
             navigation.navigate('NextScreen');
