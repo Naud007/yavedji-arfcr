@@ -4,7 +4,7 @@ const GlobalColors = {
     dark: '#202020',
     light: '#F1F7EE',
     gray: '#50514F',
-    // accent: '#F1F7EE'
+    white: '#FFFFFF'
 
 }
 

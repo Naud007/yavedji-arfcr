@@ -35,7 +35,7 @@ const queryClient = new QueryClient();
 export default function App() {
   const [isAppSet, setIsAppSet] = useState(false);
 
-  NavigationBar.setBackgroundColorAsync("#F6F8FF");
+  NavigationBar.setBackgroundColorAsync("transparent");
   NavigationBar.setButtonStyleAsync("dark");
 
   useEffect(() => {
@@ -51,6 +51,7 @@ export default function App() {
           "Inter-Regular": require("./assets/Fonts/Inter/Inter-Regular.ttf"),
           "Inter-Light": require("./assets/Fonts/Inter/Inter-Light.ttf"),
           "Inter-Thin": require("./assets/Fonts/Inter/Inter-Thin.ttf"),
+          "LeckerliOne-Regular": require("./assets/Fonts/LeckerliOne-Regular.ttf")
         })
       } catch (e) {
         console.warn(e);
@@ -104,7 +105,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: GlobalColors.light,
+    backgroundColor: GlobalColors.white,
     // alignItems: 'center',
     // justifyContent: 'center',
   },

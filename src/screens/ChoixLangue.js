@@ -117,7 +117,7 @@ const PreferenceLangue = () => {
                     ))}
                 </View>
 
-                <TouchableOpacity onPress={handleNext} style={styles.nextButton}>
+                <TouchableOpacity onPress={handleSkip} style={styles.nextButton}>
                     <Text style={styles.nextButtonText}>Suivant</Text>
                 </TouchableOpacity>
             </View>
