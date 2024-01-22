@@ -41,7 +41,10 @@ const Acceuil = () => {
                 data={headings}
                 renderItem={renderItem}
                 keyExtractor={(item) => item.id}
-                // style={{ borderWidth: 1, borderColor: "#202020", marginBottom: 0 }}
+                style={{ 
+                    paddingHorizontal: 12,
+                    // borderWidth: 1, borderColor: "#202020" 
+                }}
                 ListFooterComponent={
                     <View style={styles.container}>
                         <Text style={styles.headerText}>Sujets Spéciaux</Text>
@@ -97,8 +100,7 @@ const windowHeight = Dimensions.get('window').height;
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 12,
-        paddingVertical: 12
+        width: "100%",
     },
     headerText: {
         fontSize: 16,

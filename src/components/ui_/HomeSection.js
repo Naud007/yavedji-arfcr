@@ -4,31 +4,30 @@ import { useNavigation } from "@react-navigation/native";
 import Carousel from "react-native-reanimated-carousel";
 import LinearGradient from "react-native-linear-gradient";
 import GlobalColors from "../../styles/globalColors";
+import { useSharedValue } from "react-native-reanimated";
 
 const styles = StyleSheet.create({
     container: {
-        paddingHorizontal: 12,
-        paddingVertical: 8,
-        flex: 1,
-        height: 160,
-        // borderColor: "#202020",
-        // borderWidth: 0.5,
-    },
-    chapitresContainer: {
-        paddingHorizontal: 12,
-        paddingVertical: 8,
         flex: 1,
         height: 150,
-        // borderColor: "#202020",
-        // borderWidth: 0.5,
+        justifyContent: "space-between",
+        marginBottom: 12,
+        // borderColor: "#202020", borderWidth: 0.5,
+        
+    },
+    chapitresContainer: {
+        flex: 1,
+        height: 140,
+        justifyContent: "space-between",
+        marginBottom: 12,
+        // borderColor: "#202020", borderWidth: 0.5,
     },
     headerContainer: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         paddingHorizontal: 2,
-        // borderColor: "#202020",
-        // borderWidth: 0.5,
+        // borderColor: "#202020", borderWidth: 0.5,
     },
     headerText: {
         fontSize: 16,
@@ -45,20 +44,15 @@ const styles = StyleSheet.create({
         textAlign: "center"
     },
     carouselItem: {
-        width: 110,
-        height: 125,
+        width: 100,
+        height: 115,
         borderRadius: 15,
-        position: 'relative',
-        left: "-5%",
-        // borderColor: "#202020",
-        // borderWidth: 0.5,
+        // borderColor: "#202020", borderWidth: 0.5,
     },
     chapitresCarouselItem: {
-        width: 100,
-        height:110,
+        width: 90,
+        height: 100,
         borderRadius: 15,
-        position: 'relative',
-        left: "-5%",
     },
     imageBackground: {
         width: "100%",
@@ -84,12 +78,13 @@ const styles = StyleSheet.create({
         // bottom: "25%"
     },
     chapitresItemTitle: {
-        fontFamily: "Inter-SemiBold",
+        fontFamily: "Inter-Medium",
         color: GlobalColors.white,
         textAlign: "center",
         position: "relative",
         bottom: "5%",
-        fontSize: 12,
+        fontSize: 11,
+        lineHeight: 15,
         width: "90%"
     },
     sujetsItemTitle: {
@@ -104,7 +99,8 @@ const styles = StyleSheet.create({
         fontFamily: "Inter-Regular",
         color: GlobalColors.white,
         textAlign: "center",
-        fontSize: 10,
+        fontSize: 9,
+        lineHeight: 12.5,
         letterSpacing: -0.4,
         // width: "90%",
         position: "relative",
@@ -223,10 +219,11 @@ const sujets = [
 
 const SectionItem = ({ title }) => {
     const carouselRef = useRef(null);
+    const scrollOffsetValue = useSharedValue(0);
 
     const RenderItem = ({ item, onPress }) => (
         <TouchableOpacity
-            onPress={onPress}
+            onPress={() => onPress(item)}
             style={title == "chapitres" ? styles.chapitresCarouselItem : styles.carouselItem}
         >
             <ImageBackground
@@ -253,6 +250,10 @@ const SectionItem = ({ title }) => {
             </ImageBackground>
         </TouchableOpacity>
     );
+
+    const handleCarouselItemClick = (selectedItem, index) => {
+        console.log("Item clicked", selectedItem.name, "at index", index);
+    }
 
     let data;
 
@@ -285,26 +286,32 @@ const SectionItem = ({ title }) => {
 
             <Carousel
                 ref={carouselRef}
-                width={Dimensions.get("screen").width * 0.93}
-                height={120}
-                windowSize={1000}
+                width={title === "chapitres" ? 95 : 108}
+                height={title === "chapitres" ? 105 : 115}
+                // windowSize={data.length}
                 loop={false}
-                mode={"parallax"}
-                modeConfig={{
-                    parallaxScrollingScale: 0.9,
-                    parallaxScrollingOffset: title == "chapitres" ? 237 : 227,
-                    parallaxAdjacentItemScale: 0.9
-                }}
+                defaultScrollOffsetValue={scrollOffsetValue}
+                // mode={"horizontal-stack"}
+                // modeConfig={{
+                //     parallaxScrollingScale: 0.9,
+                //     parallaxScrollingOffset: title == "chapitres" ? 237 : 227,
+                //     parallaxAdjacentItemScale: 0.9
+                // }}
+                // modeConfig={{
+                //     showLength: data.length,
+                //     stackInterval: 120,
+                //     scaleInterval: 0
+                // }}
                 data={data}
                 renderItem={({ item, index }) => (
                     <RenderItem
                         item={item}
-                        onPress={() => carouselRef.current.scrollTo(1)}
+                        onPress={(selectedItem) => handleCarouselItemClick(selectedItem, index)}
                     />
                 )}
                 style={{
-                    // borderColor: "black",
-                    // borderWidth: 1.5,
+                    // borderColor: "black", borderWidth: 1.5, 
+                    width: Dimensions.get("screen").width,
                 }}
             // pagingEnabled={true}
             // snapEnabled={true}
