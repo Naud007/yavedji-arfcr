@@ -64,7 +64,7 @@ const styleSheet = StyleSheet.create({
         width: 200,
         height: 128,
         resizeMode: "contain",
-    },
+    }, 
     title: {
         fontSize: 32,
         color: GlobalColors.dark,
