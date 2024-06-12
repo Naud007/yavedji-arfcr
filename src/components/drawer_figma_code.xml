@@ -1,0 +1,58 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/menu"
+android:layout_width="375dp"
+android:layout_height="812dp"
+android:layout_alignParentLeft="true"
+android:layout_alignParentTop="true"
+android:clipToOutline="true"
+android:background="@drawable/menu"
+ />
+
+<!-- drawable/menu.xml -->
+<vector
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:aapt="http://schemas.android.com/aapt"
+android:width="375dp"
+android:height="812dp"
+android:viewportWidth="375"
+android:viewportHeight="812"
+ >
+<group>
+<clip-path
+android:pathData="M20 0H355C366.046 0 375 8.95431 375 20V792C375 803.046 366.046 812 355 812H20C8.95431 812 0 803.046 0 792V20C0 8.95431 8.95431 0 20 0Z"
+/>
+<group
+android:translateX="-0.5"
+android:translateY="0.898"
+android:pivotX="187.5"
+android:pivotY="406"
+android:scaleX="2.772"
+android:scaleY="2.041"
+android:rotation="-46.169"
+>
+<path
+android:pathData="M0 0V812H375V0"
+>
+<aapt:attr name="android:fillColor">
+<gradient
+android:type="linear"
+android:startX="93.75"
+android:startY="406"
+android:endX="281.25"
+android:endY="406"
+>
+<item
+android:color="#31A078"
+android:offset="0"
+/>
+<item
+android:color="#31A05F"
+android:offset="1"
+/>
+</gradient>
+</aapt:attr>
+</path>
+</group>
+</group>
+</vector>

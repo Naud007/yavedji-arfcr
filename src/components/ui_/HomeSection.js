@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginBottom: 12,
         // borderColor: "#202020", borderWidth: 0.5,
-        
+
     },
     chapitresContainer: {
         flex: 1,
@@ -251,7 +251,7 @@ const SectionItem = ({ title }) => {
         </TouchableOpacity>
     );
 
-    const handleCarouselItemClick = (selectedItem, index) => {
+    const handleItemClick = (selectedItem, index) => {
         console.log("Item clicked", selectedItem.name, "at index", index);
     }
 
@@ -292,21 +292,21 @@ const SectionItem = ({ title }) => {
                 loop={false}
                 defaultScrollOffsetValue={scrollOffsetValue}
                 // mode={"horizontal-stack"}
-                // modeConfig={{
-                //     parallaxScrollingScale: 0.9,
-                //     parallaxScrollingOffset: title == "chapitres" ? 237 : 227,
-                //     parallaxAdjacentItemScale: 0.9
-                // }}
-                // modeConfig={{
-                //     showLength: data.length,
-                //     stackInterval: 120,
-                //     scaleInterval: 0
-                // }}
+                /* modeConfig={{
+                    parallaxScrollingScale: 0.9,
+                    parallaxScrollingOffset: title == "chapitres" ? 237 : 227,
+                    parallaxAdjacentItemScale: 0.9
+                }} */
+                /* modeConfig={{
+                    showLength: data.length,
+                    stackInterval: 120,
+                    scaleInterval: 0
+                }} */
                 data={data}
                 renderItem={({ item, index }) => (
                     <RenderItem
                         item={item}
-                        onPress={(selectedItem) => handleCarouselItemClick(selectedItem, index)}
+                        onPress={(selectedItem) => handleItemClick(selectedItem, index)}
                     />
                 )}
                 style={{
